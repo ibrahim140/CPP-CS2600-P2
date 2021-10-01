@@ -5,4 +5,5 @@
 int getTripDays();
 float milesDriven();
 int departureTime();
+int arrivalTime();
 #endif
