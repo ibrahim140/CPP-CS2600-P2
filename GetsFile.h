@@ -1,7 +1,17 @@
 #include <stdio.h>
 
+//FUNCTION DECLARATIONS
+int getTripDays();
+float milesDriven();
+int departureTime();
+int arrivalTime();
+float airfare();
+float carRental();
+
+
+//FUNCTION DEFINITIONS
 int getTripDays() //Gets the total number of days spent on the trip.
-                  //Does not accept 0 as an input as per assignment instructions.
+                  //Does not accept 0 as an input as per assignment instructions.               
 {
     int numOfDays;
    
