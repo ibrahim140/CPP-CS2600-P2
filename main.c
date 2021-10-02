@@ -27,10 +27,18 @@ int main()
     float airFare, carRentalFee, privateVehicleExpense, mealCosts;
     float regFee, parkingFees, taxiFees, hotelExpenses;
 
-
+    //hotel (nights: day -1)/ taxi loop/ parking/
     /*
         function calls;
     */
+    totalDays = getTripDays();
+    arrivalTime = arrivalTime();
+    departureTime = departureTime();
+
+    airFare = airfare();
+    carRentalFee = carRental();
+    privateVehicleExpense = milesDriven();
+     
 
     return 0;
 }
