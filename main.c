@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include "fees.h"
 #include "GetsFile.h"
+#include "finalExpenses.h"
+#include "allowedExpenses.h"
 
 
 
