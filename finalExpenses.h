@@ -18,9 +18,9 @@ void finalTotalExpenses(float totalExpense, float allowedExpense){
     float finalTotal = allowedExpense - totalExpense;
 
     if(finalTotal < 0){
-        printf("The excess expenses that must be reimbursed by the businessperson are $%.2f.\n", (totalExpense*-1));
+        printf("The excess expenses that must be reimbursed by the businessperson are $%.2f.\n", (finalTotal*-1));
     }else if(finalTotal > 0){
-        printf("The amount saved by the businessperson was $%.2f.\n", totalExpense);
+        printf("The amount saved by the businessperson was $%.2f.\n", finalTotal);
     }else{
         printf("The total expenses were equal to the allowed expenses, no reimbursal needed.\n");
     }
