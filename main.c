@@ -9,4 +9,5 @@ int main() {
     float testMulti = ParkingFeeMultiDays(dayCount);
     printf("test = %.2f", test);
     printf("\ntestMulti = %.2f", testMulti);
+    return 0;
 }
