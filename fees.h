@@ -1,19 +1,5 @@
 #include <stdio.h>
 
-float hotelFeeTrue (float paid) { //Gets the hotel fee paid on that night
-    if (paid <= 90.00) return 0;
-    else return paid-90.00;
-}
-
-float parkingFeeTrue (float paid) { //Gets the parking fee paid on that day
-    if (paid <= 6.00) return 0;
-    else return paid-6.00;
-}
-
-float conferenceFeeTrue (float paid) { //Gets the conference registration fee
-    return paid; //Employee needs to pay for all of this according to document, leaving it here for consistency
-}
-
 float TaxiFee () {
     float fee;
     do
