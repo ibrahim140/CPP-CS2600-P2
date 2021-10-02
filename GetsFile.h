@@ -7,6 +7,7 @@ int departureTime();
 int arrivalTime();
 float airfare();
 float carRental();
+float foodCost();
 
 
 //FUNCTION DEFINITIONS
@@ -100,7 +101,7 @@ float airfare() //Retrieves and returns cost of any round-trip airfare
     printf("\nPlease enter the total cost of any round-trip airefare."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-    scanf("%f", airfareCost);
+    scanf("%f", &airfareCost);
 
     while (airfareCost < 0.0)
     {
@@ -119,7 +120,7 @@ float carRental() //Retrieves and returns cost of any car rentals.
     printf("\nPlease enter the total cost of any car rentals."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-    scanf("%f", carRentalCost);
+    scanf("%f", &carRentalCost);
 
     while (carRentalCost < 0.0)
     {
@@ -129,4 +130,20 @@ float carRental() //Retrieves and returns cost of any car rentals.
     }
 
     return carRentalCost; //Returns total cost as a FLOAT
+}
+
+float foodCost() //retrieves and returns costs for food
+{
+    float totalSpentOnFood;
+
+    printf("\nPlease enter the Total amount spent on food:\n$");
+    scanf("%f", &totalSpentOnFood);
+
+    while (totalSpentOnFood < 0)
+    {
+        printf("Sorry, that is not a valid input. Cannot enter negative value.");
+        totalSpentOnFood = scanf("%f", &totalSpentOnFood);
+    }
+
+    return totalSpentOnFood;
 }
