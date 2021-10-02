@@ -12,7 +12,6 @@
 #include "finalExpenses.h"
 #include "allowedExpenses.h"
 
-
 int main()
 {
     int totalDays, arrival_Time, departure_Time;
@@ -33,12 +32,11 @@ int main()
     waivedMealCost = mealCosts(arrival_Time, departure_Time);
 
     // add values to total expenses incurred over trip
-    totalExpenses = airFare + carRentalFee + privateVehicleExpense; 
-    // 
+    totalExpenses = airFare + carRentalFee + privateVehicleExpense + totalMealCost; 
+    // fees covered by the company
     coveredExpenses = airFare + carRentalFee + privateVehicleExpense + waivedMealCost; 
 
     // Fees based on the number of days.
-
     for(int i = 0; i < totalDays; i++){
         printf("Fees for day %d:\n", i+1);
         taxiFees = TaxiFee();
@@ -59,7 +57,7 @@ int main()
     /*Insert display functions for total, covered amount,
     and the final reimbursement due.*/
     displayTotalExpenses(totalExpenses);
-    displayAllowedExpenses();
+    displayAllowedExpenses(coveredExpenses);
     finalTotalExpenses(totalExpenses, coveredExpenses);
 
     return 0;
