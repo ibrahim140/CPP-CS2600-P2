@@ -6,4 +6,6 @@ int getTripDays();
 float milesDriven();
 int departureTime();
 int arrivalTime();
+float airfare();
+float carRental();
 #endif
