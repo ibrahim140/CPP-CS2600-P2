@@ -11,34 +11,50 @@
 #include "GetsFile.h"
 
 
-
-// make function for displaying
-void displayExpenses(float totalExpenses, float allowableExpenses, float extraCharges, float expensesSaved)
-{
-    printf("\nTotal spent: \t\t%.2f", /*totalExpenses*/);
-    printf("\nAllowable Expenses: \t%.2f", /*allowableExpenses*/);
-    printf("\nExtra Charges: \t\t%.2f", /*extraCharges*/);
-    printf("\nAmount Saved: \t%.2f", /*expensesSaved*/);
-}
-
 int main()
 {
-    int totalDays, arrivalTime, departureTime;
-    float airFare, carRentalFee, privateVehicleExpense, mealCosts;
+    int totalDays, arrival_Time, departure_Time;
+    float airFare, carRentalFee, privateVehicleExpense, totalMealCost, waivedMealCost;
     float regFee, parkingFees, taxiFees, hotelExpenses;
 
-    //hotel (nights: day -1)/ taxi loop/ parking/
-    /*
-        function calls;
-    */
-    totalDays = getTripDays();
-    arrivalTime = arrivalTime();
-    departureTime = departureTime();
+    float coveredExpenses = 0, totalExpenses = 0;
 
-    airFare = airfare();
-    carRentalFee = carRental();
-    privateVehicleExpense = milesDriven();
-     
+    totalDays = getTripDays();
+    departure_Time = departureTime();
+    arrival_Time = arrivalTime();
+
+    // Flat fees not based on number of days.
+    airFare = airfare();        //completely covered by company
+    carRentalFee = carRental(); //completely covered by company
+    privateVehicleExpense = milesDriven(); //completely covered by company
+    totalMealCost = foodCost();
+    waivedMealCost = mealCosts(arrival_Time, departure_Time);
+
+    // add values to total expenses incurred over trip
+    totalExpenses = airFare + carRentalFee + privateVehicleExpense; 
+    // 
+    coveredExpenses = airFare + carRentalFee + privateVehicleExpense + waivedMealCost; 
+
+    // Fees based on the number of days.
+
+    for(int i = 0; i < totalDays; i++){
+        printf("Fees for day %d:\n", i+1);
+        taxiFees = TaxiFee();
+        coveredExpenses += allowedTaxiFee(taxiFees);
+
+        hotelExpenses = HotelFee();
+        coveredExpenses += allowedHotelExpenses(hotelExpenses);
+
+        parkingFees = ParkingFee();
+        coveredExpenses += allowedParkingFee(parkingFees);
+
+        regFee = ConferenceFee();
+
+        totalExpenses += (taxiFees + hotelExpenses + parkingFees + regFee);
+    }
+
+    /*Insert display functions for total, covered amount,
+    and the final reimbursement due.*/
 
     return 0;
 }
