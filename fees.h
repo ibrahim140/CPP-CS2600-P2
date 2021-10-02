@@ -2,105 +2,108 @@
 
 float TaxiFee () {
     float fee;
-    do
-    {
+    printf("\nHow much was paid in taxi fees this day? ");
+    scanf("%f", fee);
+    while (fee < 0) {
+        printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
         printf("\nHow much was paid in taxi fees this day? ");
         scanf("%f", fee);
-        if (fee < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-    } while (fee >= 0);
-    /*fee -= 10;
-    if (fee <= 0)
-        printf("\nFee fully covered by employer! %f saved.\n", fee*-1); //this value is made positive for the user, but returned negative. It represents the amount saved from the employer covered the cost.
-    else
-        printf("\nFee partially covered by employer, cost is %f.\n", fee);*/
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    }
+    return fee; 
 }
 
 float TaxiFeeMultiDays (int days) {
-    float fee = 0, day;
+    float fee = 0, dayFee;
     for (int i = 0; i < days; i++) {
-        do
-        {
+        printf("\nHow much was paid in taxi fees on day %d? ", i+1);
+        scanf("%f", dayFee);
+        while (dayFee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in taxi fees on day %d? ", i+1);
-            scanf("%f", day);
-            if (day < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-        } while (day >= 0);
-        fee += day;
+            scanf("%f", dayFee);
+        }
+        fee += dayFee;
     }
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    return fee; 
 }
 
 float HotelFee () {
     float fee;
-    do
-    {
-        printf("\nHow much was paid in hotel fees this day? ");
-        scanf("%f", fee);
-        if (fee < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-    } while (fee >= 0);
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    printf("\nHow much was paid in hotel fees this day? ");
+    scanf("%f", fee);
+    while (fee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
+            printf("\nHow much was paid in hotel fees this day? ");
+            scanf("%f", fee);
+    }
+    return fee; 
 }
 
 float HotelFeeMultiDays (int days) {
-    float fee = 0, day;
+    float fee = 0, dayFee;
     for (int i = 0; i < days; i++) {
-        do
-        {
+        printf("\nHow much was paid in hotel fees on day %d? ", i+1);
+        scanf("%f", dayFee);
+        while (dayFee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in hotel fees on day %d? ", i+1);
-            scanf("%f", day);
-            if (day < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-        } while (day >= 0);
-        fee += day;
+            scanf("%f", dayFee);
+        }
+        fee += dayFee;
     }
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    return fee; 
 }
 
 float ParkingFee () {
     float fee;
-    do
-    {
-        printf("\nHow much was paid in parking fees this day? ");
-        scanf("%f", fee);
-        if (fee < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-    } while (fee >= 0);
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    printf("\nHow much was paid in parking fees this day? ");
+    scanf("%f", fee);
+    while (fee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
+            printf("\nHow much was paid in parking fees this day? ");
+            scanf("%f", fee);
+    }
+    return fee; 
 }
 
 float ParkingFeeMultiDays (int days) {
-    float fee = 0, day;
+    float fee = 0, dayFee;
     for (int i = 0; i < days; i++) {
-        do
-        {
+        printf("\nHow much was paid in parking fees on day %d? ", i+1);
+        scanf("%f", dayFee);
+        while (dayFee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in parking fees on day %d? ", i+1);
-            scanf("%f", day);
-            if (day < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-        } while (day >= 0);
-        fee += day;
+            scanf("%f", dayFee);
+        }
+        fee += dayFee;
     }
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    return fee; 
 }
 
 float ConferenceFee () {
     float fee;
-    do
-    {
-        printf("\nHow much was paid in conference fees this day? ");
-        scanf("%f", fee);
-        if (fee < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-    } while (fee >= 0);
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    printf("\nHow much was paid in conference fees this day? ");
+    scanf("%f", fee);
+    while (fee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
+            printf("\nHow much was paid in conference fees this day? ");
+            scanf("%f", fee);
+    }
+    return fee; 
 }
 
 float ConferenceFeeMultiDays (int days) {
-    float fee = 0, day;
+    float fee = 0, dayFee;
     for (int i = 0; i < days; i++) {
-        do
-        {
+        printf("\nHow much was paid in conference fees on day %d? ", i+1);
+        scanf("%f", dayFee);
+        while (dayFee < 0) {
+            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in conference fees on day %d? ", i+1);
-            scanf("%f", day);
-            if (day < 0) printf("\nInvalid input! fee should be from 0 to infinity (though hopefully not that far).");
-        } while (day >= 0);
-        fee += day;
+            scanf("%f", dayFee);
+        }
+        fee += dayFee;
     }
-    return fee; //If this is negative, main should save the value to a "Fee covered" variable. If it's positive, save 10 to that variable. In any case, increase the "fee total" variable by it + 10.
+    return fee; 
 }
