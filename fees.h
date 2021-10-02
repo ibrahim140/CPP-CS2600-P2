@@ -116,12 +116,9 @@ float ConferenceFeeMultiDays (int days) {
 float mealCosts(int amountOfDays, int arrivalTime, int departureTime)
 {
     int breakfast = 9, lunch = 12, dinner = 16;
-    float totalMealCosts, totalSpentOnFood;
+    float totalMealCosts;
     printf("Please enter the amount of Allowable Meals: ");
     scanf("%f", &totalMealCosts);
-
-    printf("Please enter the amount spent on food; ");
-    scanf("%f", &totalSpentOnFood);
 
     while(totalMealCosts <= 0)
     {
