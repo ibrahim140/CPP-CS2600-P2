@@ -10,22 +10,15 @@
 #include "fees.h"
 #include "GetsFile.h"
 
-struct travelExpense
-{
-    float totalExpenses;
-    float allowableExpenses;
-    float extraCharges;
-    float expensesSaved;
-}
-
+    float totalExpenses, allowableExpenses, extraCharges, expensesSaved;
 
 // make function for displaying
 void displayExpenses(/* maybe use struct as parameter*/) // also possible to just use float variables..
 {
-    printf("\nTotal spent: \t\t%.2f", /*struct -> total expenses incurred*/);
-    printf("\nAllowable Expenses: \t%.2f", /*struct -> allowable expenses*/);
-    printf("\nExtra Charges: \t\t%.2f", /*struct -> extra expenses incurred*/);
-    printf("\nAmount Saved: \t%.2f", /*struct -> expenses saved*/);
+    printf("\nTotal spent: \t\t%.2f", /*totalExpenses*/);
+    printf("\nAllowable Expenses: \t%.2f", /*allowableExpenses*/);
+    printf("\nExtra Charges: \t\t%.2f", /*extraCharges*/);
+    printf("\nAmount Saved: \t%.2f", /*expensesSaved*/);
 }
 
 int main()
