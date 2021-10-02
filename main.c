@@ -10,10 +10,10 @@
 #include "fees.h"
 #include "GetsFile.h"
 
-    float totalExpenses, allowableExpenses, extraCharges, expensesSaved;
+
 
 // make function for displaying
-void displayExpenses(/* maybe use struct as parameter*/) // also possible to just use float variables..
+void displayExpenses(float totalExpenses, float allowableExpenses, float extraCharges, float expensesSaved)
 {
     printf("\nTotal spent: \t\t%.2f", /*totalExpenses*/);
     printf("\nAllowable Expenses: \t%.2f", /*allowableExpenses*/);
@@ -23,6 +23,11 @@ void displayExpenses(/* maybe use struct as parameter*/) // also possible to jus
 
 int main()
 {
+    int totalDays, arrivalTime, departureTime;
+    float airFare, carRentalFee, privateVehicleExpense, mealCosts;
+    float regFee, parkingFees, taxiFees, hotelExpenses;
+
+
     /*
         function calls;
     */
