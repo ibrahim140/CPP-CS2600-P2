@@ -8,5 +8,5 @@ int main() {
     scanf("%d", &dayCount);
     float testMulti = ParkingFeeMultiDays(dayCount);
     printf("test = %.2f", test);
-    printf("testMulti = %.2f", testMulti);
+    printf("\ntestMulti = %.2f", testMulti);
 }
