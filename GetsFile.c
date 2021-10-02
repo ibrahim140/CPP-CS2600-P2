@@ -48,15 +48,15 @@ int departureTime() //Retrives DEPARTURE time for FIRST day of the trip.
 {
     int departTime;
 
-    printf("\nPlease input the departure time on the first day.\n"
-           "Please use military time (i.e. 2:30 = 1430\n");
+    printf("\nPlease input the departure time on the first day. Please round down to the closest hour.\n"
+           "Please use military time (i.e. 2:30 = 14\n");
 
     scanf("%d", &departTime);
 
-    while (departTime < 0.0 || departTime > 2400)
+    while (departTime < 1 || departTime > 24)
     {
-        printf("\nSorry that is not a valid input. Pleas enter following military time"
-               "For example, 2:30 PM = 1430.\n");
+        printf("\nSorry that is not a valid input. Please enter following military time"
+               "For example, 2:30 PM = 14.\n");
         scanf("%d", &departTime);
     }
     
@@ -69,15 +69,15 @@ int arrivalTime() //Retrieves ARRIVAL time back home on the LAST day of the trip
 {
     int arrivalTime;
 
-    printf("\nPlease input the arrival time on the last day.\n"
-           "Please use military time (i.e. 2:30 = 1430\n");
+    printf("\nPlease input the arrival time on the last day. Please round down to the closest hour.\n"
+           "Please use military time (i.e. 2:30 PM = 14\n");
 
     scanf("%d", &arrivalTime);
 
-    while (arrivalTime < 0.0 || arrivalTime > 2400)
+    while (arrivalTime < 1 || arrivalTime > 24)
     {
         printf("\nSorry that is not a valid input. Pleas enter in military time"
-               "For example, 2:30 PM = 1430.\n");
+               "For example, 2:30 PM = 14.\n");
         scanf("%d", &arrivalTime);
     }
     
