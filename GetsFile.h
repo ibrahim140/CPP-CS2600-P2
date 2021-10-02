@@ -65,8 +65,7 @@ int departureTime() //Retrives DEPARTURE time for FIRST day of the trip.
     while (departTime < 0 || departTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-                "to the last hour.\n");
-               "For example, 2:30 PM = 14.\n");
+                "to the last hour.\nFor example, 2:30 PM = 14.\n");
         scanf("%d", &departTime);
     }
     
@@ -87,8 +86,7 @@ int arrivalTime() //Retrieves ARRIVAL time back home on the LAST day of the trip
     while (arrivalTime < 0 || arrivalTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-               "to the last hour\n");
-               "For example, 2:30 PM = 14.\n");
+               "to the last hour.\nFor example, 2:30 PM = 14.\n");
         scanf("%d", &arrivalTime);
     }
     
@@ -102,7 +100,7 @@ float airfare() //Retrieves and returns cost of any round-trip airfare
     printf("\nPlease enter the total cost of any round-trip airefare."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-           printf("%f", airfareCost);
+           scanf("%f", airfareCost);
 
            while (airfareCost < 0.0)
            {
@@ -121,7 +119,7 @@ float carRental() //Retrieves and returns cost of any car rentals.
     printf("\nPlease enter the total cost of any car rentals."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-           printf("%f", carRentalCost);
+           scanf("%f", carRentalCost);
 
            while (carRentalCost < 0.0)
            {
