@@ -100,14 +100,14 @@ float airfare() //Retrieves and returns cost of any round-trip airfare
     printf("\nPlease enter the total cost of any round-trip airefare."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-           scanf("%f", airfareCost);
+    scanf("%f", airfareCost);
 
-           while (airfareCost < 0.0)
-           {
-               printf("\nSorry that is not a valid input. Pleas enter a "
-               "non-negative value.\n$");
-               scanf("%f", &airfareCost);
-           }
+    while (airfareCost < 0.0)
+    {
+        printf("\nSorry that is not a valid input. Pleas enter a "
+        "non-negative value.\n$");
+        scanf("%f", &airfareCost);
+    }
 
     return airfareCost; //Returns total cost as a FLOAT
 }
@@ -119,14 +119,14 @@ float carRental() //Retrieves and returns cost of any car rentals.
     printf("\nPlease enter the total cost of any car rentals."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
-           scanf("%f", carRentalCost);
+    scanf("%f", carRentalCost);
 
-           while (carRentalCost < 0.0)
-           {
-               printf("\nSorry that is not a valid input. Pleas enter a "
-               "non-negative value.\n$");
-               scanf("%f", &carRentalCost);
-           }
+    while (carRentalCost < 0.0)
+    {
+        printf("\nSorry that is not a valid input. Pleas enter a "
+        "non-negative value.\n$");
+        scanf("%f", &carRentalCost);
+    }
 
     return carRentalCost; //Returns total cost as a FLOAT
 }
