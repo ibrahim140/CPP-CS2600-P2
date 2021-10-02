@@ -5,9 +5,12 @@
 float mealCosts(int amountOfDays, int arrivalTime, int departureTime)
 {
     int breakfast = 9, lunch = 12, dinner = 16;
-    float totalMealCosts;
+    float totalMealCosts, totalSpentOnFood;
     printf("Please enter the amount of Allowable Meals: ");
     scanf("%f", &totalMealCosts);
+
+    printf("Please enter the amount spent on food; ");
+    scanf("%f", &totalSpentOnFood);
 
     while(totalMealCosts <= 0)
     {
@@ -47,5 +50,5 @@ float mealCosts(int amountOfDays, int arrivalTime, int departureTime)
 
     /* return the total meal costs after removing the amount that the company would cover
         if the value is positive, then you need to reimburrse, if negative, you saved. */
-    return (totalMealCosts -= (amountOfDays*(breakfast + lunch + dinner)));
+    return (totalMealCosts -= (amountOfDays*(breakfast + lunch + dinner))), totalSpentOnFood;
 }
