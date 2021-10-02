@@ -51,12 +51,16 @@ int main()
         coveredExpenses += allowedParkingFee(parkingFees);
 
         regFee = ConferenceFee();
+        coveredExpenses += regFee;
 
         totalExpenses += (taxiFees + hotelExpenses + parkingFees + regFee);
     }
 
     /*Insert display functions for total, covered amount,
     and the final reimbursement due.*/
+    displayTotalExpenses(totalExpenses);
+    displayAllowedExpenses();
+    finalTotalExpenses(totalExpenses, coveredExpenses);
 
     return 0;
 }
