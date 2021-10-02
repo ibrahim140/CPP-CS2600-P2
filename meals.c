@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-float mealCosts(int amountOfDays, float arrivalTime, float departureTime)
+float mealCosts(int amountOfDays, int arrivalTime, int departureTime)
 {
     int breakfast = 9, lunch = 12, dinner = 16;
     float totalMealCosts;
