@@ -42,7 +42,7 @@ float milesDriven()
     float numOfMiles;
     float vehicleExpense;
 
-    printf("Please input the number of miles driven if a private vehicle was used: ");
+    printf("\nPlease input the number of miles driven if a private vehicle was used: ");
 
     scanf("%f", &numOfMiles);
 
