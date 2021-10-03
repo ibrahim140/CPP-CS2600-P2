@@ -74,7 +74,7 @@ int departureTime()
     while (departTime < 0 || departTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-                "to the last hour.\nFor example, 2:30 PM = 14.)\n");
+                "to the last hour.\n(For example, 2:30 PM = 14.)\n");
         scanf("%d", &departTime);
     }
     
@@ -98,7 +98,7 @@ int arrivalTime()
     while (arrivalTime < 0 || arrivalTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-               "to the last hour.\nFor example, 2:30 PM = 14.)\n");
+               "to the last hour.\n(For example, 2:30 PM = 14.)\n");
         scanf("%d", &arrivalTime);
     }
     
