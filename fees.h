@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-float TaxiFee () {
+float TaxiFee () { //Prompts user for taxi fee as a float, and returns the given value once validated.
     float fee;
     printf("\nHow much was paid in taxi fees this day?: $");
-    scanf("%f", &fee);
-    while (fee < 0) {
+    scanf("%f", &fee); //Get the value here, saved in fee
+    while (fee < 0) { //If fee is negative (impossible under normal circumstances), prompt user again, stating minimum and maximum amounts
         printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
         printf("\nHow much was paid in taxi fees this day? ");
         scanf("%f", &fee);
@@ -12,11 +12,11 @@ float TaxiFee () {
     return fee; 
 }
 
-float HotelFee () {
+float HotelFee () { //Prompts user for taxi fee as a float, and returns the given value once validated.
     float fee;
     printf("\nHow much was paid in hotel fees this day?: $");
-    scanf("%f", &fee);
-    while (fee < 0) {
+    scanf("%f", &fee); //Get the value here, saved in fee
+    while (fee < 0) { //If fee is negative (impossible under normal circumstances), prompt user again, stating minimum and maximum amounts
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in hotel fees this day? ");
             scanf("%f", &fee);
@@ -32,8 +32,8 @@ float HotelFee () {
 float ParkingFee () {
     float fee;
     printf("\nHow much was paid in parking fees this day?: $");
-    scanf("%f", &fee);
-    while (fee < 0) {
+    scanf("%f", &fee); //Get the value here, saved in fee
+    while (fee < 0) { //If fee is negative (impossible under normal circumstances), prompt user again, stating minimum and maximum amounts
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in parking fees this day? ");
             scanf("%f", &fee);
@@ -49,8 +49,8 @@ float ParkingFee () {
 float ConferenceFee () {
     float fee;
     printf("\nHow much was paid in conference fees this day? $");
-    scanf("%f", &fee);
-    while (fee < 0) {
+    scanf("%f", &fee); //Get the value here, saved in fee
+    while (fee < 0) { //If fee is negative (impossible under normal circumstances), prompt user again, stating minimum and maximum amounts
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
             printf("\nHow much was paid in conference fees this day? ");
             scanf("%f", &fee);
