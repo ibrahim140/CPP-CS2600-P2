@@ -116,7 +116,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
 
     // meals are allowed if departure time is before 7 am, 12 pm, & 6 pm
     // if-else-if structure for meals on first day of trip (departure)
-    if(departureTime <= 7)
+    if(departureTime > 0 && departureTime <= 7)
     {   
         printf("\nHow much was breakfast before departure: $");
         scanf("%f", &firstAllowedMealCost);
@@ -159,7 +159,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     
     // meals are allowed if arrival time is after 8 am, 1 pm, & 7 pm
     // if-else-if structure for meals on last day of trip (arrival)
-    if(arrivalTime > 8)
+    if(arrivalTime >= 8& arrivalTime < 13)
     {
         printf("\nHow much was breakfast before arrival: $");
         scanf("%f", &secondAllowedMealCost);
@@ -172,7 +172,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
             mealCostCovered += BREAKFAST;
         }   
     }
-    else if (arrivalTime > 13)
+    else if (arrivalTime > 13 && arrivalTime < 19)
     {
         printf("\nHow much was Lunch before arrival: $");
         scanf("%f", &secondAllowedMealCost);
@@ -185,7 +185,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
             mealCostCovered += LUNCH;
         }
     }
-    else if (arrivalTime > 19)
+    else if (arrivalTime > 19 && arrivalTime < 24)
     {
         printf("\nHow much was Dinner before arrival: $");
         scanf("%f", &secondAllowedMealCost);
