@@ -17,8 +17,8 @@ int main()
     int totalDays, arrival_Time, departure_Time;
     float airFare, carRentalFee, privateVehicleExpense, totalMealCost, waivedMealCost;
     float regFee, parkingFees, taxiFees, hotelExpenses;
-
     float coveredExpenses = 0, totalExpenses = 0;
+    static float firstAllowedMeal, secondAllowedMeal;
 
     totalDays = getTripDays();
     departure_Time = departureTime();
