@@ -18,7 +18,9 @@ int main()
     float airFare, carRentalFee, privateVehicleExpense, totalMealCost, waivedMealCost;
     float regFee, parkingFees, taxiFees, hotelExpenses;
     float coveredExpenses = 0, totalExpenses = 0;
-    static float firstAllowedMeal, secondAllowedMeal;
+    float firstAllowedMeal, secondAllowedMeal;
+    float* firstMeal = &firstAllowedMeal;
+    float* secondMeal = &secondAllowedMeal;
 
     totalDays = getTripDays();
     departure_Time = departureTime();
@@ -28,7 +30,7 @@ int main()
     airFare = airfare();        //completely covered by company
     carRentalFee = carRental(); //completely covered by company
     privateVehicleExpense = milesDriven(); //completely covered by company
-    waivedMealCost = mealCosts(arrival_Time, departure_Time, firstAllowedMeal, secondAllowedMeal);
+    waivedMealCost = mealCosts(arrival_Time, departure_Time, firstMeal, secondMeal);
 
     // add values to total expenses incurred over trip
     totalExpenses = airFare + carRentalFee + privateVehicleExpense + 
