@@ -109,40 +109,94 @@ float ConferenceFeeMultiDays (int days) {
 }
 
 //meals function
-float mealCosts(int arrivalTime, int departureTime)
+float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, float secondAllowedMealCost)
 {
     const int BREAKFAST = 9, LUNCH = 12, DINNER = 16;
-
     int mealCostCovered = 0;
-    
+
     // meals are allowed if departure time is before 7 am, 12 pm, & 6 pm
     // if-else-if structure for meals on first day of trip (departure)
     if(departureTime <= 7)
-    {
-        mealCostCovered += BREAKFAST;
+    {   
+        printf("\nHow much was breakfast before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += BREAKFAST;
+        }   
     }
+
     else if ((departureTime > 7) && (departureTime <= 12))
     {
-        mealCostCovered += LUNCH;
+        printf("\nHow much was Lunch before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += LUNCH;
+        }
     }
     else if ((departureTime > 12) && (departureTime <= 18))
     {
-        mealCostCovered += DINNER;
+        printf("\nHow much was Dinner before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += DINNER;
+        }
     }
     
     // meals are allowed if arrival time is after 8 am, 1 pm, & 7 pm
     // if-else-if structure for meals on last day of trip (arrival)
     if(arrivalTime > 8)
     {
-        mealCostCovered += BREAKFAST;
+        printf("\nHow much was breakfast before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += BREAKFAST;
+        }   
     }
     else if (arrivalTime > 13)
     {
-        mealCostCovered += LUNCH;
+        printf("\nHow much was Lunch before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += LUNCH;
+        }
     }
     else if (arrivalTime > 19)
     {
-        mealCostCovered += DINNER;
+        printf("\nHow much was Dinner before departure: $");
+        scanf("%d", firstAllowedMealCost);
+        if(firstAllowedMealCost < BREAKFAST)
+        {
+            mealCostCovered += firstAllowedMealCost;
+        }
+        else
+        {
+            mealCostCovered += DINNER;
+        }
     }
 
     return mealCostCovered;
