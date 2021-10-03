@@ -11,8 +11,12 @@ float foodCost();
 
 
 //FUNCTION DEFINITIONS
-int getTripDays() //Gets the total number of days spent on the trip.
-                  //Does not accept 0 as an input as per assignment instructions.               
+
+/* Gets the total number of days spent on the trip by user input.
+   Does not accept 0 as an input as per assignment instructions.
+   Returns this value as an int.
+*/
+int getTripDays()               
 {
     int numOfDays;
    
@@ -30,9 +34,10 @@ int getTripDays() //Gets the total number of days spent on the trip.
 }
 
 
-
-float milesDriven() //Gets miles driven from user and calculates vehicle expense.
-                    //Returns this as a FLOAT. Does not accept negative numbers.
+/*  Gets miles driven from user and calculates vehicle expense.
+    Returns this value as a float. Does not accept negative numbers.
+*/
+float milesDriven()
 {
     float numOfMiles;
     float vehicleExpense;
@@ -53,8 +58,11 @@ float milesDriven() //Gets miles driven from user and calculates vehicle expense
 }
 
 
-
-int departureTime() //Retrives DEPARTURE time for FIRST day of the trip.
+/* Retrieves departure time for first day of the trip via user input.
+   Utilizes military time (0-23) for hours.
+   Returns this value as an int.
+*/
+int departureTime()
 {
     int departTime;
 
@@ -74,8 +82,11 @@ int departureTime() //Retrives DEPARTURE time for FIRST day of the trip.
 }
 
 
-
-int arrivalTime() //Retrieves ARRIVAL time back home on the LAST day of the trip
+/* Retrieves arrival time for last day of the trip via user input.
+   Utilizes military time (0-23) for hours.
+   Returns this value as an int.
+*/
+int arrivalTime() 
 {
     int arrivalTime;
 
@@ -94,7 +105,11 @@ int arrivalTime() //Retrieves ARRIVAL time back home on the LAST day of the trip
     return arrivalTime; //Returns ARRIVAL time in MILITARY TIME (INT)
 }
 
-float airfare() //Retrieves and returns cost of any round-trip airfare
+
+/* Retirves cost of any round-trip airfare via user input.
+   Returns this value as a float.
+*/
+float airfare()
 {
     float airfareCost;
 
@@ -113,7 +128,11 @@ float airfare() //Retrieves and returns cost of any round-trip airfare
     return airfareCost; //Returns total cost as a FLOAT
 }
 
-float carRental() //Retrieves and returns cost of any car rentals.
+
+/* Retrieves cost of any car rentals via user input.
+   Returns this value as a float.
+*/
+float carRental()
 {
     float carRentalCost;
 
