@@ -20,13 +20,13 @@ int getTripDays()
 {
     int numOfDays;
    
-    printf("Please input the number of days you spent on the trip.");
+    printf("Please input the number of days you spent on the trip: ");
 
     scanf("%d", &numOfDays);
 
     while (numOfDays <= 0)
     {
-        printf("Sorry, that is not a valid input. Please input a value greater than 0.");
+        printf("Sorry, that is not a valid input. Please input a value greater than 0: ");
         numOfDays = scanf("%d", &numOfDays);
     }
 
@@ -42,13 +42,13 @@ float milesDriven()
     float numOfMiles;
     float vehicleExpense;
 
-    printf("Please input the number of miles driven if a private vehicle was used.");
+    printf("Please input the number of miles driven if a private vehicle was used: ");
 
     scanf("%f", &numOfMiles);
 
     while (numOfMiles < 0.0)
     {
-        printf("Sorry that is not a valid input. Pleas enter a non-negative value.");
+        printf("Sorry that is not a valid input. Pleas enter a non-negative value: ");
         scanf("%f", &numOfMiles);
     }
 
@@ -67,14 +67,14 @@ int departureTime()
     int departTime;
 
     printf("\nPlease input the departure time on the first day. Please round down to the closest hour.\n"
-           "Please use military time (i.e. 12:00 AM = 0 / 11 PM = 23.\n");
+           "Please use military time (i.e. 12:00 AM = 0 / 11 PM = 23.)\n");
 
     scanf("%d", &departTime);
 
     while (departTime < 0 || departTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-                "to the last hour.\nFor example, 2:30 PM = 14.\n");
+                "to the last hour.\nFor example, 2:30 PM = 14.)\n");
         scanf("%d", &departTime);
     }
     
@@ -91,14 +91,14 @@ int arrivalTime()
     int arrivalTime;
 
     printf("\nPlease input the arrival time on the last day. Please round down to the closest hour.\n"
-           "Please use military time (i.e. 12:00 AM = 0 / 11 PM = 23.\n");
+           "Please use military time (i.e. 12:00 AM = 0 / 11 PM = 23.)\n");
 
     scanf("%d", &arrivalTime);
 
     while (arrivalTime < 0 || arrivalTime > 23)
     {
         printf("\nSorry that is not a valid input. Please enter following military time and round down "
-               "to the last hour.\nFor example, 2:30 PM = 14.\n");
+               "to the last hour.\nFor example, 2:30 PM = 14.)\n");
         scanf("%d", &arrivalTime);
     }
     
@@ -120,7 +120,7 @@ float airfare()
 
     while (airfareCost < 0.0)
     {
-        printf("\nSorry that is not a valid input. Pleas enter a "
+        printf("\nSorry that is not a valid input. Please enter a "
         "non-negative value.\n$");
         scanf("%f", &airfareCost);
     }
@@ -143,7 +143,7 @@ float carRental()
 
     while (carRentalCost < 0.0)
     {
-        printf("\nSorry that is not a valid input. Pleas enter a "
+        printf("\nSorry that is not a valid input. Please enter a "
         "non-negative value.\n$");
         scanf("%f", &carRentalCost);
     }
