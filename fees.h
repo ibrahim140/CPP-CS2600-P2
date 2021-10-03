@@ -109,8 +109,9 @@ float ConferenceFeeMultiDays (int days) {
 }
 
 //meals function
-float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, float secondAllowedMealCost)
+float mealCosts(int arrivalTime, int departureTime, float *firstMeal, float *secondMeal)
 {
+    float firstAllowedMealCost, secondAllowedMealCost;
     const int BREAKFAST = 9, LUNCH = 12, DINNER = 16;
     int mealCostCovered = 0;
 
@@ -120,6 +121,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     {   
         printf("\nHow much was breakfast before departure: $");
         scanf("%f", &firstAllowedMealCost);
+        *firstMeal = firstAllowedMealCost;
         if(firstAllowedMealCost < BREAKFAST)
         {
             mealCostCovered += firstAllowedMealCost;
@@ -134,6 +136,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     {
         printf("\nHow much was Lunch before departure: $");
         scanf("%f", &firstAllowedMealCost);
+        *firstMeal = firstAllowedMealCost;
         if(firstAllowedMealCost < LUNCH)
         {
             mealCostCovered += firstAllowedMealCost;
@@ -147,6 +150,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     {
         printf("\nHow much was Dinner before departure: $");
         scanf("%f", &firstAllowedMealCost);
+        *firstMeal = firstAllowedMealCost;
         if(firstAllowedMealCost < DINNER)
         {
             mealCostCovered += firstAllowedMealCost;
