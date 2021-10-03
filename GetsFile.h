@@ -131,19 +131,3 @@ float carRental() //Retrieves and returns cost of any car rentals.
 
     return carRentalCost; //Returns total cost as a FLOAT
 }
-
-float foodCost() //retrieves and returns costs for food
-{
-    float totalSpentOnFood;
-
-    printf("\nPlease enter the Total amount spent on food:\n$");
-    scanf("%f", &totalSpentOnFood);
-
-    while (totalSpentOnFood < 0)
-    {
-        printf("Sorry, that is not a valid input. Cannot enter negative value.");
-        totalSpentOnFood = scanf("%f", &totalSpentOnFood);
-    }
-
-    return totalSpentOnFood;
-}
