@@ -119,7 +119,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     if(departureTime <= 7)
     {   
         printf("\nHow much was breakfast before departure: $");
-        scanf("%d", firstAllowedMealCost);
+        scanf("%f", &firstAllowedMealCost);
         if(firstAllowedMealCost < BREAKFAST)
         {
             mealCostCovered += firstAllowedMealCost;
@@ -133,7 +133,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     else if ((departureTime > 7) && (departureTime <= 12))
     {
         printf("\nHow much was Lunch before departure: $");
-        scanf("%d", firstAllowedMealCost);
+        scanf("%f", &firstAllowedMealCost);
         if(firstAllowedMealCost < BREAKFAST)
         {
             mealCostCovered += firstAllowedMealCost;
@@ -146,7 +146,7 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     else if ((departureTime > 12) && (departureTime <= 18))
     {
         printf("\nHow much was Dinner before departure: $");
-        scanf("%d", firstAllowedMealCost);
+        scanf("%f", &firstAllowedMealCost);
         if(firstAllowedMealCost < BREAKFAST)
         {
             mealCostCovered += firstAllowedMealCost;
@@ -162,10 +162,10 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     if(arrivalTime > 8)
     {
         printf("\nHow much was breakfast before departure: $");
-        scanf("%d", firstAllowedMealCost);
-        if(firstAllowedMealCost < BREAKFAST)
+        scanf("%f", &secondAllowedMealCost);
+        if(secondAllowedMealCost < BREAKFAST)
         {
-            mealCostCovered += firstAllowedMealCost;
+            mealCostCovered += secondAllowedMealCost;
         }
         else
         {
@@ -175,10 +175,10 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     else if (arrivalTime > 13)
     {
         printf("\nHow much was Lunch before departure: $");
-        scanf("%d", firstAllowedMealCost);
-        if(firstAllowedMealCost < BREAKFAST)
+        scanf("%f", &secondAllowedMealCost);
+        if(secondAllowedMealCost < BREAKFAST)
         {
-            mealCostCovered += firstAllowedMealCost;
+            mealCostCovered += secondAllowedMealCost;
         }
         else
         {
@@ -188,10 +188,10 @@ float mealCosts(int arrivalTime, int departureTime, float firstAllowedMealCost, 
     else if (arrivalTime > 19)
     {
         printf("\nHow much was Dinner before departure: $");
-        scanf("%d", firstAllowedMealCost);
-        if(firstAllowedMealCost < BREAKFAST)
+        scanf("%f", &secondAllowedMealCost);
+        if(secondAllowedMealCost < BREAKFAST)
         {
-            mealCostCovered += firstAllowedMealCost;
+            mealCostCovered += secondAllowedMealCost;
         }
         else
         {
