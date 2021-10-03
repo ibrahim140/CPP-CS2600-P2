@@ -12,21 +12,6 @@ float TaxiFee () {
     return fee; 
 }
 
-/* float TaxiFeeMultiDays (int days) {
-    float fee = 0, dayFee;
-    for (int i = 0; i < days; i++) {
-        printf("\nHow much was paid in taxi fees on day %d? ", i+1);
-        scanf("%f", &dayFee);
-        while (dayFee < 0) {
-            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
-            printf("\nHow much was paid in taxi fees on day %d? ", i+1);
-            scanf("%f", &dayFee);
-        }
-        fee += dayFee;
-    }
-    return fee; 
-} */
-
 float HotelFee () {
     float fee;
     printf("\nHow much was paid in hotel fees this day?: $");
@@ -38,21 +23,6 @@ float HotelFee () {
     }
     return fee; 
 }
-
-/* float HotelFeeMultiDays (int days) {
-    float fee = 0, dayFee;
-    for (int i = 0; i < days; i++) {
-        printf("\nHow much was paid in hotel fees on day %d? ", i+1);
-        scanf("%f", &dayFee);
-        while (dayFee < 0) {
-            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
-            printf("\nHow much was paid in hotel fees on day %d? ", i+1);
-            scanf("%f", &dayFee);
-        }
-        fee += dayFee;
-    }
-    return fee; 
-} */
 
 /*
     Function to get the amount paid for parking fees
@@ -71,21 +41,6 @@ float ParkingFee () {
     return fee; 
 }
 
-/* float ParkingFeeMultiDays (int days) {
-    float fee = 0, dayFee;
-    for (int i = 0; i < days; i++) {
-        printf("\nHow much was paid in parking fees on day %d? ", i+1);
-        scanf("%f", &dayFee);
-        while (dayFee < 0) {
-            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
-            printf("\nHow much was paid in parking fees on day %d? ", i+1);
-            scanf("%f", &dayFee);
-        }
-        fee += dayFee;
-    }
-    return fee; 
-} */
-
 /*
     Function to get the amount paid for conference fees
     intended to get total amount spent on conference fees each day
@@ -102,22 +57,6 @@ float ConferenceFee () {
     }
     return fee; 
 }
-
-
-/* float ConferenceFeeMultiDays (int days) {
-    float fee = 0, dayFee;
-    for (int i = 0; i < days; i++) {
-        printf("\nHow much was paid in conference fees on day %d? ", i+1);
-        scanf("%f", &dayFee);
-        while (dayFee < 0) {
-            printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
-            printf("\nHow much was paid in conference fees on day %d? ", i+1);
-            scanf("%f", &dayFee);
-        }
-        fee += dayFee;
-    }
-    return fee;
-} */
 
 /*
     mealCost function - takes in arrival time and departure time as well as pointers to the first
