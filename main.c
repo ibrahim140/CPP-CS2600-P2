@@ -40,7 +40,7 @@ int main()
 
     // Fees based on the number of days.
     for(int i = 0; i < totalDays; i++){
-        printf("Fees for day %d:\n", i+1);
+        printf("\nFees for day %d:\n", i+1);
         taxiFees = TaxiFee();
         coveredExpenses += allowedTaxiFee(taxiFees);
 
