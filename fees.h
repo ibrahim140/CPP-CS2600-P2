@@ -2,7 +2,7 @@
 
 float TaxiFee () {
     float fee;
-    printf("\nHow much was paid in taxi fees this day? ");
+    printf("\nHow much was paid in taxi fees this day?: $");
     scanf("%f", &fee);
     while (fee < 0) {
         printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
@@ -29,7 +29,7 @@ float TaxiFeeMultiDays (int days) {
 
 float HotelFee () {
     float fee;
-    printf("\nHow much was paid in hotel fees this day? ");
+    printf("\nHow much was paid in hotel fees this day?: $");
     scanf("%f", &fee);
     while (fee < 0) {
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
@@ -56,7 +56,7 @@ float HotelFeeMultiDays (int days) {
 
 float ParkingFee () {
     float fee;
-    printf("\nHow much was paid in parking fees this day? ");
+    printf("\nHow much was paid in parking fees this day?: $");
     scanf("%f", &fee);
     while (fee < 0) {
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
@@ -83,7 +83,7 @@ float ParkingFeeMultiDays (int days) {
 
 float ConferenceFee () {
     float fee;
-    printf("\nHow much was paid in conference fees this day? ");
+    printf("\nHow much was paid in conference fees this day? $");
     scanf("%f", &fee);
     while (fee < 0) {
             printf("\nInvalid input! fee should be from 0 to %d (though hopefully not that far).", __INT_MAX__);
