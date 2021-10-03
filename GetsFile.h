@@ -48,7 +48,7 @@ float milesDriven()
 
     while (numOfMiles < 0.0)
     {
-        printf("Sorry that is not a valid input. Pleas enter a non-negative value: ");
+        printf("Sorry that is not a valid input. Please enter a non-negative value: ");
         scanf("%f", &numOfMiles);
     }
 
@@ -113,7 +113,7 @@ float airfare()
 {
     float airfareCost;
 
-    printf("\nPlease enter the total cost of any round-trip airefare."
+    printf("\nPlease enter the total cost of your round-trip airfare."
             "For example, if you spent $100.50, simply enter \"100.50\".\n$");
 
     scanf("%f", &airfareCost);
