@@ -28,7 +28,6 @@ int main()
     airFare = airfare();        //completely covered by company
     carRentalFee = carRental(); //completely covered by company
     privateVehicleExpense = milesDriven(); //completely covered by company
-    totalMealCost = foodCost();
     waivedMealCost = mealCosts(arrival_Time, departure_Time, firstAllowedMeal, secondAllowedMeal);
 
     // add values to total expenses incurred over trip
