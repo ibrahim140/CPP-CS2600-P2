@@ -31,7 +31,8 @@ int main()
     waivedMealCost = mealCosts(arrival_Time, departure_Time, firstAllowedMeal, secondAllowedMeal);
 
     // add values to total expenses incurred over trip
-    totalExpenses = airFare + carRentalFee + privateVehicleExpense + totalMealCost; 
+    totalExpenses = airFare + carRentalFee + privateVehicleExpense + 
+                totalMealCost + firstAllowedMeal + secondAllowedMeal; 
     // fees covered by the company
     coveredExpenses = airFare + carRentalFee + privateVehicleExpense + waivedMealCost; 
 
