@@ -3,9 +3,9 @@
     Description: This program is designed to get user input to calculate the total for travel expenses. The program asks for total days, car rentals,
      airfare, parking fees, lodging, food, etc.. These values are then taken to perform calculations and display to the user the total expenses incurred, 
      total allowable expenses, and the excess if the person went over the allowed limit OR the amount saved if they stayed under the allowed limit.
-
 */
 
+// #include guards
 #include <stdio.h>
 #include "fees.h"
 #include "GetsFile.h"
@@ -14,6 +14,7 @@
 
 int main()
 {
+    // decalre/initialize all local variables
     int totalDays, arrival_Time, departure_Time;
     float airFare, carRentalFee, privateVehicleExpense, totalMealCost, waivedMealCost;
     float regFee, parkingFees, taxiFees, hotelExpenses;
@@ -22,6 +23,7 @@ int main()
     float* firstMeal = &firstAllowedMeal;
     float* secondMeal = &secondAllowedMeal;
 
+    // call functions to get total days spent on trip, departure time and arrival time
     totalDays = getTripDays();
     departure_Time = departureTime();
     arrival_Time = arrivalTime();

@@ -1,3 +1,8 @@
+/*
+    This file contains the functions which will get the user inputs for trip days, departure time,
+     arrival time, miles driven, airfare, and  car rental fee
+*/
+
 #include <stdio.h>
 
 //FUNCTION DECLARATIONS
@@ -7,7 +12,6 @@ int departureTime();
 int arrivalTime();
 float airfare();
 float carRental();
-float foodCost();
 
 
 //FUNCTION DEFINITIONS

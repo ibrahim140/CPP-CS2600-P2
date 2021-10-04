@@ -1,3 +1,8 @@
+/*
+    This file contains the functions that will return the cost for taxi fare, lodging fees, parking fees,
+     and the conference fees as well as the allowed meals costs
+*/
+
 #include <stdio.h>
 
 float TaxiFee () { //Prompts user for taxi fee as a float, and returns the given value once validated.
