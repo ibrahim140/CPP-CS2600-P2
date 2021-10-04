@@ -27,7 +27,7 @@ int getTripDays()
     while (numOfDays <= 0)
     {
         printf("Sorry, that is not a valid input. Please input a value greater than 0: ");
-        numOfDays = scanf("%d", &numOfDays);
+        scanf("%d", &numOfDays);
     }
 
     return numOfDays; //Returns number of days as an INT
